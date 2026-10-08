@@ -1,0 +1,1564 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ahmed Mohamed Mounir | Network & IT Infrastructure Support Engineer</title>
+  <meta name="description" content="Portfolio of Ahmed Mohamed Mounir — Network & IT Infrastructure Support Engineer specializing in multi-branch enterprise networks, DrayTek VPNs, Windows Server 2025, CCTV surveillance, and virtualization.">
+  <meta name="keywords" content="Ahmed Mohamed Mounir, Network Engineer, IT Support Engineer, DrayTek VPN, Cisco, CCNA, Windows Server 2025, Active Directory, Giza Egypt">
+  <meta name="author" content="Ahmed Mohamed Mounir">
+  <meta property="og:title" content="Ahmed Mohamed Mounir | Network & IT Infrastructure Support Engineer">
+  <meta property="og:description" content="Explore enterprise network architectures, multi-branch VPN deployments, server virtualization, and interactive networking tools.">
+  <meta property="og:type" content="website">
+
+  <!-- Google Fonts: Inter & JetBrains Mono -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- Background Canvas for Interactive Network Mesh -->
+  <canvas id="networkCanvas" class="network-bg" aria-hidden="true"></canvas>
+
+  <!-- Ambient Glow Effects -->
+  <div class="ambient-glow glow-top" aria-hidden="true"></div>
+  <div class="ambient-glow glow-bottom" aria-hidden="true"></div>
+
+  <!-- Header / Navigation Bar -->
+  <header class="site-header" id="header">
+    <div class="container header-container">
+      <a href="#hero" class="brand-logo" aria-label="Ahmed Mohamed Mounir Home">
+        <div class="brand-icon">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <rect x="2" y="2" width="20" height="8" rx="2" ry="2"></rect>
+            <rect x="2" y="14" width="20" height="8" rx="2" ry="2"></rect>
+            <line x1="6" y1="6" x2="6.01" y2="6"></line>
+            <line x1="6" y1="18" x2="6.01" y2="18"></line>
+          </svg>
+        </div>
+        <div class="brand-text">
+          <span class="brand-name">AHMED<span class="text-accent">.DEV</span></span>
+          <span class="brand-sub">NETWORK & IT INFRASTRUCTURE</span>
+        </div>
+      </a>
+
+      <nav class="nav-menu" id="navMenu" aria-label="Main Navigation">
+        <ul class="nav-list">
+          <li><a href="#about" class="nav-link">About</a></li>
+          <li><a href="#skills" class="nav-link">Skills</a></li>
+          <li><a href="#projects" class="nav-link">Projects</a></li>
+          <li><a href="#experience" class="nav-link">Experience</a></li>
+          <li><a href="#subnet-calc" class="nav-link">Subnet Tool</a></li>
+          <li><a href="#contact" class="nav-link">Contact</a></li>
+        </ul>
+      </nav>
+
+      <div class="header-actions">
+        <div class="status-indicator" title="System Status: High Availability">
+          <span class="pulse-dot"></span>
+          <span class="status-text">Available For Hire</span>
+        </div>
+        <a href="Ahmed_Mounir_IT_CV_Reviewed.pdf" class="btn btn-outline btn-sm" download="Ahmed_Mounir_IT_CV.pdf" id="navResumeBtn">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+            <polyline points="7 10 12 15 17 10"></polyline>
+            <line x1="12" y1="15" x2="12" y2="3"></line>
+          </svg>
+          <span>CV PDF</span>
+        </a>
+        <button class="mobile-toggle" id="mobileToggle" aria-label="Toggle navigation menu" aria-expanded="false">
+          <span class="hamburger-bar"></span>
+          <span class="hamburger-bar"></span>
+          <span class="hamburger-bar"></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- HERO SECTION -->
+    <section class="section hero-section" id="hero">
+      <div class="container hero-grid">
+        <div class="hero-content">
+          <div class="hero-badge">
+            <span class="badge-icon">⚡</span>
+            <span>ENTERPRISE NETWORK & INFRASTRUCTURE SPECIALIST</span>
+          </div>
+          <h1 class="hero-title">
+            Architecting <span class="gradient-text">Resilient Networks</span> & High-Availability Systems
+          </h1>
+          <p class="hero-description">
+            I am <strong>Ahmed Mohamed Mounir</strong>, a Network & IT Infrastructure Support Engineer based in Giza, Egypt. 
+            I specialize in multi-branch VPN connectivity, Layer 2/3 Cisco switching, Windows Server 2025 virtualization, 
+            and mission-critical CCTV & biometric ecosystems with <strong>100% operational reliability</strong>.
+          </p>
+
+          <div class="hero-cta-group">
+            <a href="#projects" class="btn btn-primary" id="heroViewProjectsBtn">
+              <span>Explore Projects</span>
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <line x1="5" y1="12" x2="19" y2="12"></line>
+                <polyline points="12 5 19 12 12 19"></polyline>
+              </svg>
+            </a>
+            <a href="#contact" class="btn btn-secondary" id="heroContactBtn">
+              <span>Contact Me</span>
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                <polyline points="22,6 12,13 2,6"></polyline>
+              </svg>
+            </a>
+            <a href="Ahmed_Mounir_IT_CV_Reviewed.pdf" class="btn btn-ghost" download="Ahmed_Mounir_IT_CV.pdf" id="heroDownloadCvBtn">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+                <polyline points="14 2 14 8 20 8"></polyline>
+                <line x1="12" y1="18" x2="12" y2="12"></line>
+                <polyline points="9 15 12 18 15 15"></polyline>
+              </svg>
+              <span>Download CV</span>
+            </a>
+            <a href="https://github.com/ahmedalshamy247-lang/Ahmed-portfolio" target="_blank" rel="noopener noreferrer" class="btn btn-ghost" id="heroGithubBtn" title="GitHub Repository">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
+              </svg>
+              <span>GitHub</span>
+            </a>
+          </div>
+
+          <!-- Hero Metrics Grid -->
+          <div class="hero-metrics">
+            <div class="metric-card">
+              <div class="metric-value gradient-cyan" id="metricBranches">5</div>
+              <div class="metric-label">Branches Connected</div>
+            </div>
+            <div class="metric-card">
+              <div class="metric-value gradient-emerald" id="metricReadiness">100%</div>
+              <div class="metric-label">CCTV & Biometric Uptime</div>
+            </div>
+            <div class="metric-card">
+              <div class="metric-value gradient-purple" id="metricLabs">10+</div>
+              <div class="metric-label">Network Protocols & Labs</div>
+            </div>
+            <div class="metric-card">
+              <div class="metric-value gradient-amber" id="metricMttr">&lt;15m</div>
+              <div class="metric-label">Incident SLA Response</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Interactive Terminal Card -->
+        <div class="hero-terminal-wrapper">
+          <div class="terminal-card">
+            <div class="terminal-header">
+              <div class="terminal-buttons">
+                <span class="btn-dot close"></span>
+                <span class="btn-dot minimize"></span>
+                <span class="btn-dot maximize"></span>
+              </div>
+              <div class="terminal-title">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <polyline points="4 17 10 11 4 5"></polyline>
+                  <line x1="12" y1="19" x2="20" y2="19"></line>
+                </svg>
+                ahmed@infrastructure-node: ~
+              </div>
+              <div class="terminal-status">
+                <span class="live-pill">ONLINE</span>
+              </div>
+            </div>
+
+            <div class="terminal-body" id="terminalOutput">
+              <div class="term-line intro-line">
+                <span class="term-accent">root@router-edge:</span> SYSTEM INITIALIZED — ALL INTERFACES UP
+              </div>
+              <div class="term-line">
+                <span class="term-prompt">ahmed@core:~$</span> <span class="term-cmd">infra-status --verbose</span>
+              </div>
+              <div class="term-response">
+                <div class="status-row">
+                  <span class="status-key">WAN Gateway:</span>
+                  <span class="status-val text-emerald">192.168.10.1 (DrayTek Vigor 2927) [ACTIVE]</span>
+                </div>
+                <div class="status-row">
+                  <span class="status-key">Site-to-Site VPN:</span>
+                  <span class="status-val text-cyan">5 Branches Meshed (IPsec / SSL) [CONNECTED]</span>
+                </div>
+                <div class="status-row">
+                  <span class="status-key">Active Directory:</span>
+                  <span class="status-val text-emerald">Windows Server 2025 AD DS [HEALTHY]</span>
+                </div>
+                <div class="status-row">
+                  <span class="status-key">HIS/PACS Healthcare:</span>
+                  <span class="status-val text-cyan">MILLENSYS Servers [SYNCHRONIZED]</span>
+                </div>
+                <div class="status-row">
+                  <span class="status-key">Biometrics (ZKTeco):</span>
+                  <span class="status-val text-emerald">Data sync reliability: 100%</span>
+                </div>
+              </div>
+              <div class="term-line helper-line">
+                <span class="term-dim">Type commands or click quick actions below:</span>
+              </div>
+            </div>
+
+            <!-- Terminal Interactive Input -->
+            <div class="terminal-input-container">
+              <span class="term-prompt">guest@terminal:~$</span>
+              <input type="text" id="terminalInput" class="term-input" placeholder="Type 'help', 'skills', 'ping', 'cv'..." autocomplete="off" spellcheck="false">
+              <button id="terminalSubmitBtn" class="term-submit-btn" aria-label="Send Command">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <line x1="22" y1="2" x2="11" y2="13"></line>
+                  <polygon points="22 2 15 22 11 13 2 9 22 2"></polygon>
+                </svg>
+              </button>
+            </div>
+
+            <!-- Quick Command Chips -->
+            <div class="terminal-chips">
+              <button class="term-chip" data-cmd="skills">skills</button>
+              <button class="term-chip" data-cmd="projects">projects</button>
+              <button class="term-chip" data-cmd="ping 8.8.8.8">ping 8.8.8.8</button>
+              <button class="term-chip" data-cmd="github">github</button>
+              <button class="term-chip" data-cmd="whoami">whoami</button>
+              <button class="term-chip" data-cmd="contact">contact</button>
+              <button class="term-chip" data-cmd="clear">clear</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ABOUT SECTION -->
+    <section class="section about-section" id="about">
+      <div class="container">
+        <div class="section-header">
+          <div class="section-tag">BACKGROUND & PROFILE</div>
+          <h2 class="section-title">Bridging Technical Rigor with Strategic Leadership</h2>
+          <p class="section-subtitle">
+            A battle-tested IT Infrastructure & Network Support Engineer with a unique blend of deep hands-on technical skills and executive commercial leadership experience.
+          </p>
+        </div>
+
+        <div class="about-grid">
+          <!-- Biography Card -->
+          <div class="about-card bio-card">
+            <div class="bio-header">
+              <div class="avatar-ring">
+                <div class="avatar-inner">
+                  <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+                    <circle cx="12" cy="7" r="4"></circle>
+                    <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+                  </svg>
+                </div>
+              </div>
+              <div>
+                <h3 class="bio-name">Ahmed Mohamed Mounir</h3>
+                <p class="bio-role text-cyan">Network & IT Infrastructure Support Engineer</p>
+                <p class="bio-location">
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                    <circle cx="12" cy="10" r="3"></circle>
+                  </svg>
+                  Giza, Egypt (Open to On-site, Hybrid & Relocation)
+                </p>
+              </div>
+            </div>
+
+            <div class="bio-body">
+              <p>
+                I hold a proven track record supporting multi-branch enterprise environments encompassing 
+                high-availability <strong>Cisco routing and switching, DrayTek VPN tunnels, Windows Server 2025 Active Directory, 
+                Hyper-V virtualization</strong>, enterprise CCTV surveillance, and ZKTeco biometric attendance systems.
+              </p>
+              <p>
+                At <strong>MEGA SCAN</strong>, I transformed CCTV surveillance operational readiness across five branches from 
+                <strong>20% to 100%</strong>, overhauled biometric reporting reliability from <strong>70% to 100%</strong>, and established 
+                secure branch-to-branch site-to-site VPNs supporting critical <strong>MILLENSYS HIS/PACS/ERP</strong> healthcare applications.
+              </p>
+              <p>
+                My previous background as a <strong>Sales Manager and Team Leader</strong> gives me a rare edge: exceptional 
+                stakeholder communication, rapid escalation management, calm problem-solving under SLA pressure, and 
+                a continuous thirst for technology. I am currently pursuing an <strong>IT Diploma at Ain Shams University</strong> 
+                and studying <strong>Huawei Cloud</strong> architecture.
+              </p>
+            </div>
+
+            <!-- Quick Contacts Row -->
+            <div class="bio-contact-pills">
+              <a href="mailto:Ahmedalshamy247@gmail.com" class="contact-pill">
+                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                  <polyline points="22,6 12,13 2,6"></polyline>
+                </svg>
+                Ahmedalshamy247@gmail.com
+              </a>
+              <a href="tel:+201011655015" class="contact-pill">
+                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+                </svg>
+                010-11655015
+              </a>
+              <a href="https://github.com/ahmedalshamy247-lang" target="_blank" rel="noopener noreferrer" class="contact-pill">
+                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
+                </svg>
+                github/ahmedalshamy247-lang
+              </a>
+            </div>
+          </div>
+
+          <!-- 4 Core Pillars Grid -->
+          <div class="about-pillars">
+            <div class="pillar-card">
+              <div class="pillar-icon text-cyan">
+                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M4 11a9 9 0 0 1 9 9"></path>
+                  <path d="M4 4a16 16 0 0 1 16 16"></path>
+                  <circle cx="5" cy="19" r="1"></circle>
+                </svg>
+              </div>
+              <h4 class="pillar-title">Multi-Branch Connectivity</h4>
+              <p class="pillar-desc">
+                Architecting deterministic site-to-site DrayTek IPsec/SSL VPNs, VLAN segmentation (802.1Q), and Inter-VLAN routing for zero-loss clinic-to-HQ synchronization.
+              </p>
+            </div>
+
+            <div class="pillar-card">
+              <div class="pillar-icon text-emerald">
+                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <rect x="2" y="2" width="20" height="8" rx="2" ry="2"></rect>
+                  <rect x="2" y="14" width="20" height="8" rx="2" ry="2"></rect>
+                  <line x1="6" y1="6" x2="6.01" y2="6"></line>
+                  <line x1="6" y1="18" x2="6.01" y2="18"></line>
+                </svg>
+              </div>
+              <h4 class="pillar-title">Windows Server 2025 & AD DS</h4>
+              <p class="pillar-desc">
+                Active Directory domain forests, centralized GPO policies, DHCP relay with IP Helper, DNS forwarders, Hyper-V virtual machines, and fine-grained NTFS ACLs.
+              </p>
+            </div>
+
+            <div class="pillar-card">
+              <div class="pillar-icon text-purple">
+                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+                </svg>
+              </div>
+              <h4 class="pillar-title">Network Security & Hardening</h4>
+              <p class="pillar-desc">
+                Implementing standard & extended Access Control Lists (ACLs), DHCP Snooping, Port Security, SSH remote management, firewall NAT/PAT, and DrayTek content filters.
+              </p>
+            </div>
+
+            <div class="pillar-card">
+              <div class="pillar-icon text-amber">
+                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <circle cx="12" cy="12" r="10"></circle>
+                  <polygon points="12 6 12 12 16 14"></polygon>
+                </svg>
+              </div>
+              <h4 class="pillar-title">Rapid SLA & 100% Readiness</h4>
+              <p class="pillar-desc">
+                Proven record boosting surveillance camera operational status from 20% to 100% and automated biometric attendance extraction from 70% to 100% reliability.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- TECHNICAL SKILLS MATRIX -->
+    <section class="section skills-section" id="skills">
+      <div class="container">
+        <div class="section-header">
+          <div class="section-tag">CORE COMPETENCIES</div>
+          <h2 class="section-title">Technical Skills Matrix</h2>
+          <p class="section-subtitle">
+            Comprehensive proficiency across networking protocols, enterprise server operating systems, virtualization, security, and industrial surveillance.
+          </p>
+        </div>
+
+        <!-- Filter & Search Controls -->
+        <div class="skills-controls">
+          <div class="skills-filter-tabs" role="tablist">
+            <button class="filter-tab active" data-filter="all" role="tab" aria-selected="true">All Skills</button>
+            <button class="filter-tab" data-filter="networking" role="tab" aria-selected="false">Networking & Switching</button>
+            <button class="filter-tab" data-filter="security" role="tab" aria-selected="false">Security & VPN</button>
+            <button class="filter-tab" data-filter="windows" role="tab" aria-selected="false">Windows Server & Virtualization</button>
+            <button class="filter-tab" data-filter="monitoring" role="tab" aria-selected="false">IT Support & Monitoring</button>
+            <button class="filter-tab" data-filter="surveillance" role="tab" aria-selected="false">CCTV & Biometrics</button>
+          </div>
+
+          <div class="skills-search">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <circle cx="11" cy="11" r="8"></circle>
+              <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+            </svg>
+            <input type="text" id="skillSearchInput" placeholder="Filter skills (e.g., VLAN, DrayTek, DNS, Hyper-V, Wireshark)..." aria-label="Search skills">
+          </div>
+        </div>
+
+        <!-- Skills Grid Container -->
+        <div class="skills-grid" id="skillsGrid">
+          <!-- Networking Category -->
+          <div class="skill-card" data-category="networking" data-keywords="lan wan tcp ip ipv4 subnetting vlans trunks 802.1q routing switching stp etherchannel ospf eigrp bgp fiber">
+            <div class="skill-card-top">
+              <div class="skill-icon-badge text-cyan">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <circle cx="18" cy="5" r="3"></circle>
+                  <circle cx="6" cy="12" r="3"></circle>
+                  <circle cx="18" cy="19" r="3"></circle>
+                  <line x1="8.59" y1="13.51" x2="15.42" y2="17.49"></line>
+                  <line x1="15.41" y1="6.51" x2="8.59" y2="10.49"></line>
+                </svg>
+              </div>
+              <span class="skill-level-badge level-expert">Advanced</span>
+            </div>
+            <h3 class="skill-title">Cisco LAN / WAN & Switching</h3>
+            <p class="skill-summary">
+              VLAN segmentation, 802.1Q trunking, Inter-VLAN routing (ROAS & SVI Multilayer Switches), Spanning Tree Protocol (STP), EtherChannel LACP/PAgP, and HSRP default gateway redundancy.
+            </p>
+            <div class="skill-tags">
+              <span class="tag">VLANs</span>
+              <span class="tag">Trunks 802.1Q</span>
+              <span class="tag">Inter-VLAN</span>
+              <span class="tag">STP</span>
+              <span class="tag">EtherChannel</span>
+              <span class="tag">HSRP</span>
+              <span class="tag">OSPF / Static</span>
+            </div>
+          </div>
+
+          <div class="skill-card" data-category="networking" data-keywords="tcp ip ipv4 subnetting cidr vlsm structured cabling fiber optics wi-fi access points">
+            <div class="skill-card-top">
+              <div class="skill-icon-badge text-cyan">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M5 12.55a11 11 0 0 1 14.08 0"></path>
+                  <path d="M1.42 9a16 16 0 0 1 21.16 0"></path>
+                  <path d="M8.53 16.11a6 6 0 0 1 6.95 0"></path>
+                  <line x1="12" y1="20" x2="12.01" y2="20"></line>
+                </svg>
+              </div>
+              <span class="skill-level-badge level-expert">Advanced</span>
+            </div>
+            <h3 class="skill-title">TCP/IP, Subnetting & Physical Layer</h3>
+            <p class="skill-summary">
+              IPv4 variable-length subnet masking (VLSM), CIDR calculations, packet header analysis, Cat6/Cat6a structured cabling termination, patch panels, fiber optic media, and enterprise Wi-Fi AP deployment.
+            </p>
+            <div class="skill-tags">
+              <span class="tag">TCP/IP</span>
+              <span class="tag">VLSM / CIDR</span>
+              <span class="tag">Structured Cabling</span>
+              <span class="tag">Fiber Optics</span>
+              <span class="tag">Enterprise Wi-Fi</span>
+            </div>
+          </div>
+
+          <!-- Security Category -->
+          <div class="skill-card" data-category="security" data-keywords="draytek vpn ipsec ssl site-to-site nat pat acls dhcp snooping port security ssh firewalls">
+            <div class="skill-card-top">
+              <div class="skill-icon-badge text-emerald">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect>
+                  <path d="M7 11V7a5 5 0 0 1 10 0v4"></path>
+                </svg>
+              </div>
+              <span class="skill-level-badge level-expert">Advanced</span>
+            </div>
+            <h3 class="skill-title">DrayTek VPN & Branch Security</h3>
+            <p class="skill-summary">
+              Configuration and troubleshooting of DrayTek Vigor multi-branch IPsec & SSL site-to-site VPN tunnels, NAT/PAT address translation, dynamic DNS, content security filtering, and WAN failover routing.
+            </p>
+            <div class="skill-tags">
+              <span class="tag">DrayTek Vigor</span>
+              <span class="tag">Site-to-Site VPN</span>
+              <span class="tag">IPsec / SSL</span>
+              <span class="tag">NAT / PAT</span>
+              <span class="tag">Failover WAN</span>
+            </div>
+          </div>
+
+          <div class="skill-card" data-category="security" data-keywords="acls access control lists dhcp snooping port security ssh 802.1x switch hardening dai">
+            <div class="skill-card-top">
+              <div class="skill-icon-badge text-emerald">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+                </svg>
+              </div>
+              <span class="skill-level-badge level-expert">Advanced</span>
+            </div>
+            <h3 class="skill-title">Switch Port Security & ACLs</h3>
+            <p class="skill-summary">
+              Hardening enterprise switches with Port Security (MAC limiting & sticky learning, violation shutdown modes), DHCP Snooping against rogue servers, Dynamic ARP Inspection (DAI), and Standard/Extended IPv4 ACLs.
+            </p>
+            <div class="skill-tags">
+              <span class="tag">Port Security</span>
+              <span class="tag">DHCP Snooping</span>
+              <span class="tag">Extended ACLs</span>
+              <span class="tag">SSH v2 Hardening</span>
+              <span class="tag">MAC Filtering</span>
+            </div>
+          </div>
+
+          <!-- Windows & Virtualization -->
+          <div class="skill-card" data-category="windows" data-keywords="windows server 2025 active directory domain services gpo group policy dns dhcp ip helper relay ntfs permissions">
+            <div class="skill-card-top">
+              <div class="skill-icon-badge text-purple">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <rect x="2" y="2" width="20" height="8" rx="2" ry="2"></rect>
+                  <rect x="2" y="14" width="20" height="8" rx="2" ry="2"></rect>
+                  <line x1="6" y1="6" x2="6.01" y2="6"></line>
+                  <line x1="6" y1="18" x2="6.01" y2="18"></line>
+                </svg>
+              </div>
+              <span class="skill-level-badge level-expert">Advanced</span>
+            </div>
+            <h3 class="skill-title">Windows Server 2025 & AD DS</h3>
+            <p class="skill-summary">
+              Active Directory Domain Services (AD DS) administration, Group Policy Objects (GPOs) for enterprise security policies, DNS forwarders & reverse zones, DHCP failover scopes, IP Helper relay, and granular NTFS file security.
+            </p>
+            <div class="skill-tags">
+              <span class="tag">Windows Server 2025</span>
+              <span class="tag">Active Directory</span>
+              <span class="tag">Group Policy (GPO)</span>
+              <span class="tag">DNS / DHCP Relay</span>
+              <span class="tag">NTFS Permissions</span>
+            </div>
+          </div>
+
+          <div class="skill-card" data-category="windows" data-keywords="virtualization hyper-v vmware esxi workstation virtual machines snapshots vlan tagging">
+            <div class="skill-card-top">
+              <div class="skill-icon-badge text-purple">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <polyline points="16 18 22 12 16 6"></polyline>
+                  <polyline points="8 6 2 12 8 18"></polyline>
+                </svg>
+              </div>
+              <span class="skill-level-badge level-intermediate">Proficient</span>
+            </div>
+            <h3 class="skill-title">Hyper-V & VMware Virtualization</h3>
+            <p class="skill-summary">
+              Deploying and provisioning virtual machines, virtual switches (External, Internal, Private), VLAN ID tagging on virtual NICs, snapshot management, disaster recovery backups, and cloud migration prep (Huawei Cloud).
+            </p>
+            <div class="skill-tags">
+              <span class="tag">Microsoft Hyper-V</span>
+              <span class="tag">VMware Workstation/ESXi</span>
+              <span class="tag">Virtual Switches</span>
+              <span class="tag">Huawei Cloud</span>
+              <span class="tag">Backup / Recovery</span>
+            </div>
+          </div>
+
+          <!-- Monitoring & IT Support -->
+          <div class="skill-card" data-category="monitoring" data-keywords="wireshark gns3 solarwinds packet analysis packet capture hardware troubleshooting diagnostics voip ip phone">
+            <div class="skill-card-top">
+              <div class="skill-icon-badge text-amber">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M22 12h-4l-3 9L9 3l-3 9H2"></path>
+                </svg>
+              </div>
+              <span class="skill-level-badge level-expert">Advanced</span>
+            </div>
+            <h3 class="skill-title">Packet Analysis & Monitoring</h3>
+            <p class="skill-summary">
+              Deep packet inspection with Wireshark (TCP retransmissions, DNS delays, DHCP handshakes), network emulation in GNS3 / Cisco Packet Tracer, SolarWinds SNMP performance monitoring, and root-cause analysis.
+            </p>
+            <div class="skill-tags">
+              <span class="tag">Wireshark</span>
+              <span class="tag">GNS3 Labs</span>
+              <span class="tag">SolarWinds SNMP</span>
+              <span class="tag">Packet Tracer</span>
+              <span class="tag">MTTR Optimization</span>
+            </div>
+          </div>
+
+          <div class="skill-card" data-category="monitoring" data-keywords="voip ip telephony ip phone sip conference rooms millensys his pacs rps erp healthcare solutions">
+            <div class="skill-card-top">
+              <div class="skill-icon-badge text-amber">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+                </svg>
+              </div>
+              <span class="skill-level-badge level-expert">Advanced</span>
+            </div>
+            <h3 class="skill-title">VoIP Telephony & Enterprise Apps</h3>
+            <p class="skill-summary">
+              IP PBX / SIP phone configuration, QoS voice VLAN prioritization, meeting room audio/video setup, and on-premise healthcare software support (MILLENSYS Hospital Information Systems, PACS imaging, RPS & ERP).
+            </p>
+            <div class="skill-tags">
+              <span class="tag">VoIP / SIP</span>
+              <span class="tag">Voice VLAN</span>
+              <span class="tag">MILLENSYS HIS/PACS</span>
+              <span class="tag">ERP Support</span>
+              <span class="tag">Conference Setup</span>
+            </div>
+          </div>
+
+          <!-- CCTV & Biometrics -->
+          <div class="skill-card" data-category="surveillance" data-keywords="cctv nvr dvr ip cameras hcsa surveillance zkteco biometric fingerprint attendance data extraction">
+            <div class="skill-card-top">
+              <div class="skill-icon-badge text-cyan">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z"></path>
+                  <circle cx="12" cy="13" r="4"></circle>
+                </svg>
+              </div>
+              <span class="skill-level-badge level-expert">Advanced</span>
+            </div>
+            <h3 class="skill-title">CCTV, NVR/DVR & IP Surveillance</h3>
+            <p class="skill-summary">
+              Certified HCSA knowledge in CCTV architecture, multi-channel NVR/DVR deployments, PoE IP cameras, remote stream forwarding over VPN, continuous recording schedules, motion alerts, and hardware diagnostics.
+            </p>
+            <div class="skill-tags">
+              <span class="tag">HCSA Certified</span>
+              <span class="tag">NVR / DVR Storage</span>
+              <span class="tag">PoE IP Cameras</span>
+              <span class="tag">Remote Viewing</span>
+              <span class="tag">100% Readiness Record</span>
+            </div>
+          </div>
+
+          <div class="skill-card" data-category="surveillance" data-keywords="zkteco biometric systems fingerprint attendance synchronization employee records data extraction reporting">
+            <div class="skill-card-top">
+              <div class="skill-icon-badge text-cyan">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M12 11c0 3.517-1.009 6.799-2.753 9.571m-3.44-2.04l.054-.09A13.916 13.916 0 0 0 8 11a4 4 0 1 1 8 0c0 1.017-.07 2.019-.203 3m-2.118 6.844A21.88 21.88 0 0 0 15.171 17m3.839 1.132c.645-2.266.99-4.659.99-7.132A8 8 0 0 0 4 11m0 0a8 8 0 0 0 .167 1.6"></path>
+                </svg>
+              </div>
+              <span class="skill-level-badge level-expert">Advanced</span>
+            </div>
+            <h3 class="skill-title">ZKTeco Biometrics & Attendance Sync</h3>
+            <p class="skill-summary">
+              Deployment and maintenance of ZKTeco fingerprint/face recognition terminals, automated multi-branch database synchronization across WAN, SQL/CSV data extraction scripts, and attendance reliability boost to 100%.
+            </p>
+            <div class="skill-tags">
+              <span class="tag">ZKTeco Biometrics</span>
+              <span class="tag">WAN Data Sync</span>
+              <span class="tag">Database Extraction</span>
+              <span class="tag">Access Control</span>
+              <span class="tag">Audit Reports</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FEATURED PROJECTS & CASE STUDIES -->
+    <section class="section projects-section" id="projects">
+      <div class="container">
+        <div class="section-header">
+          <div class="section-tag">ENGINEERING PORTFOLIO</div>
+          <h2 class="section-title">Featured Infrastructure & Network Projects</h2>
+          <p class="section-subtitle">
+            Real-world enterprise network architectures, high-availability deployments, and practical laboratory topologies with quantified operational outcomes.
+          </p>
+        </div>
+
+        <div class="projects-grid">
+          <!-- PROJECT 1 -->
+          <article class="project-card" id="project-mega-scan">
+            <div class="project-preview">
+              <!-- High-Tech SVG Network Diagram Visual -->
+              <div class="diagram-canvas">
+                <svg viewBox="0 0 600 320" class="svg-diagram" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <!-- Background grid -->
+                  <defs>
+                    <pattern id="diagGrid1" width="30" height="30" patternUnits="userSpaceOnUse">
+                      <path d="M 30 0 L 0 0 0 30" fill="none" stroke="rgba(255,255,255,0.04)" stroke-width="1"/>
+                    </pattern>
+                    <linearGradient id="cyanLine" x1="0%" y1="0%" x2="100%" y2="100%">
+                      <stop offset="0%" stop-color="#06b6d4" stop-opacity="0.8"/>
+                      <stop offset="100%" stop-color="#3b82f6" stop-opacity="0.2"/>
+                    </linearGradient>
+                  </defs>
+                  <rect width="100%" height="100%" fill="url(#diagGrid1)" />
+
+                  <!-- Central HQ Node -->
+                  <g class="diag-node hq-node">
+                    <rect x="230" y="30" width="140" height="60" rx="8" fill="#111827" stroke="#06b6d4" stroke-width="2"/>
+                    <circle cx="250" cy="50" r="5" fill="#10b981"/>
+                    <text x="265" y="55" fill="#f8fafc" font-size="12" font-family="JetBrains Mono" font-weight="bold">HQ DATA CENTER</text>
+                    <text x="250" y="75" fill="#94a3b8" font-size="10" font-family="JetBrains Mono">DrayTek VPN + HIS/PACS</text>
+                  </g>
+
+                  <!-- Branch 1 -->
+                  <g class="diag-node branch-1">
+                    <rect x="30" y="160" width="110" height="50" rx="6" fill="#111827" stroke="#3b82f6" stroke-width="1.5"/>
+                    <text x="45" y="180" fill="#f8fafc" font-size="11" font-family="JetBrains Mono" font-weight="600">Branch 01</text>
+                    <text x="45" y="198" fill="#64748b" font-size="9" font-family="JetBrains Mono">VLAN 10/20 • NVR</text>
+                  </g>
+
+                  <!-- Branch 2 -->
+                  <g class="diag-node branch-2">
+                    <rect x="150" y="240" width="110" height="50" rx="6" fill="#111827" stroke="#3b82f6" stroke-width="1.5"/>
+                    <text x="165" y="260" fill="#f8fafc" font-size="11" font-family="JetBrains Mono" font-weight="600">Branch 02</text>
+                    <text x="165" y="278" fill="#64748b" font-size="9" font-family="JetBrains Mono">VLAN 10/20 • ZKTeco</text>
+                  </g>
+
+                  <!-- Branch 3 -->
+                  <g class="diag-node branch-3">
+                    <rect x="340" y="240" width="110" height="50" rx="6" fill="#111827" stroke="#3b82f6" stroke-width="1.5"/>
+                    <text x="355" y="260" fill="#f8fafc" font-size="11" font-family="JetBrains Mono" font-weight="600">Branch 03</text>
+                    <text x="355" y="278" fill="#64748b" font-size="9" font-family="JetBrains Mono">VLAN 10/20 • CCTV</text>
+                  </g>
+
+                  <!-- Branch 4 & 5 -->
+                  <g class="diag-node branch-4">
+                    <rect x="460" y="160" width="110" height="50" rx="6" fill="#111827" stroke="#3b82f6" stroke-width="1.5"/>
+                    <text x="475" y="180" fill="#f8fafc" font-size="11" font-family="JetBrains Mono" font-weight="600">Branch 04 & 05</text>
+                    <text x="475" y="198" fill="#64748b" font-size="9" font-family="JetBrains Mono">IPsec VPN Mesh</text>
+                  </g>
+
+                  <!-- Connection Lines with Animated Pulses -->
+                  <path d="M 300 90 L 85 160" stroke="#06b6d4" stroke-width="1.5" stroke-dasharray="4,4" class="pulse-line"/>
+                  <path d="M 300 90 L 205 240" stroke="#06b6d4" stroke-width="1.5" stroke-dasharray="4,4" class="pulse-line"/>
+                  <path d="M 300 90 L 395 240" stroke="#06b6d4" stroke-width="1.5" stroke-dasharray="4,4" class="pulse-line"/>
+                  <path d="M 300 90 L 515 160" stroke="#06b6d4" stroke-width="1.5" stroke-dasharray="4,4" class="pulse-line"/>
+
+                  <!-- Data Packet indicator -->
+                  <circle cx="192" cy="125" r="4" fill="#00f0ff" class="data-pulse-dot">
+                    <animate attributeName="opacity" values="0.3;1;0.3" dur="2s" repeatCount="indefinite"/>
+                  </circle>
+                  <circle cx="407" cy="125" r="4" fill="#10b981" class="data-pulse-dot">
+                    <animate attributeName="opacity" values="0.3;1;0.3" dur="2s" repeatCount="indefinite"/>
+                  </circle>
+                </svg>
+              </div>
+
+              <div class="project-overlay-badge">
+                <span class="badge-status-dot"></span>
+                <span>PRODUCTION MULTI-BRANCH DEPLOYMENT</span>
+              </div>
+            </div>
+
+            <div class="project-content">
+              <div class="project-meta">
+                <span class="project-client">MEGA SCAN (5 Branches)</span>
+                <span class="project-timeline">Feb 2025 — Present</span>
+              </div>
+              <h3 class="project-title">Multi-Branch DrayTek VPN Mesh & Surveillance Overhaul</h3>
+              <p class="project-description">
+                Engineered robust encrypted branch-to-branch DrayTek IPsec VPN infrastructure interconnecting 5 medical centers with central servers. Overhauled deteriorating CCTV camera infrastructure from 20% to 100% operational readiness and integrated ZKTeco biometric sync pipelines with 100% reporting reliability.
+              </p>
+
+              <div class="project-metrics-row">
+                <div class="impact-metric">
+                  <span class="impact-val text-emerald">20% → 100%</span>
+                  <span class="impact-desc">CCTV Surveillance Readiness</span>
+                </div>
+                <div class="impact-metric">
+                  <span class="impact-val text-cyan">70% → 100%</span>
+                  <span class="impact-desc">Biometric Sync Reliability</span>
+                </div>
+                <div class="impact-metric">
+                  <span class="impact-val text-purple">5 Sites</span>
+                  <span class="impact-desc">Secure Mesh Interconnected</span>
+                </div>
+              </div>
+
+              <div class="project-tech-tags">
+                <span class="tag">DrayTek Vigor VPN</span>
+                <span class="tag">IPsec / SSL Tunnel</span>
+                <span class="tag">ZKTeco Biometrics</span>
+                <span class="tag">NVR / IP Cameras</span>
+                <span class="tag">MILLENSYS HIS/PACS</span>
+                <span class="tag">VLAN Segmentation</span>
+              </div>
+
+              <div class="project-card-actions">
+                <button class="btn btn-primary btn-sm modal-trigger" data-project="mega-scan">
+                  <span>Architecture Deep Dive</span>
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+                    <polyline points="15 3 21 3 21 9"></polyline>
+                    <line x1="10" y1="14" x2="21" y2="3"></line>
+                  </svg>
+                </button>
+                <a href="#contact" class="btn btn-outline btn-sm">
+                  <span>Discuss Similar Project</span>
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <!-- PROJECT 2 -->
+          <article class="project-card" id="project-network-lab">
+            <div class="project-preview">
+              <div class="diagram-canvas">
+                <svg viewBox="0 0 600 320" class="svg-diagram" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <rect width="100%" height="100%" fill="url(#diagGrid1)" />
+
+                  <!-- Core Layer Switches -->
+                  <g class="diag-node core-sw1">
+                    <rect x="140" y="30" width="130" height="55" rx="6" fill="#111827" stroke="#10b981" stroke-width="1.8"/>
+                    <text x="155" y="52" fill="#f8fafc" font-size="11" font-family="JetBrains Mono" font-weight="bold">Core-SW01 (MLS)</text>
+                    <text x="155" y="70" fill="#94a3b8" font-size="9" font-family="JetBrains Mono">HSRP Active • SVI 10/20</text>
+                  </g>
+
+                  <g class="diag-node core-sw2">
+                    <rect x="330" y="30" width="130" height="55" rx="6" fill="#111827" stroke="#10b981" stroke-width="1.8"/>
+                    <text x="345" y="52" fill="#f8fafc" font-size="11" font-family="JetBrains Mono" font-weight="bold">Core-SW02 (MLS)</text>
+                    <text x="345" y="70" fill="#94a3b8" font-size="9" font-family="JetBrains Mono">HSRP Standby • EtherCh</text>
+                  </g>
+
+                  <!-- Etherchannel trunk between cores -->
+                  <line x1="270" y1="58" x2="330" y2="58" stroke="#10b981" stroke-width="3" stroke-dasharray="2,2"/>
+                  <text x="275" y="48" fill="#10b981" font-size="8" font-family="JetBrains Mono">LACP Po1</text>
+
+                  <!-- Distribution & Access Switches -->
+                  <g class="diag-node acc-sw1">
+                    <rect x="60" y="160" width="120" height="50" rx="6" fill="#111827" stroke="#06b6d4" stroke-width="1.5"/>
+                    <text x="72" y="180" fill="#f8fafc" font-size="11" font-family="JetBrains Mono" font-weight="600">Access-SW01</text>
+                    <text x="72" y="198" fill="#64748b" font-size="9" font-family="JetBrains Mono">VLAN 10: Finance</text>
+                  </g>
+
+                  <g class="diag-node acc-sw2">
+                    <rect x="240" y="160" width="120" height="50" rx="6" fill="#111827" stroke="#06b6d4" stroke-width="1.5"/>
+                    <text x="252" y="180" fill="#f8fafc" font-size="11" font-family="JetBrains Mono" font-weight="600">Access-SW02</text>
+                    <text x="252" y="198" fill="#64748b" font-size="9" font-family="JetBrains Mono">VLAN 20: Medical</text>
+                  </g>
+
+                  <g class="diag-node acc-sw3">
+                    <rect x="420" y="160" width="120" height="50" rx="6" fill="#111827" stroke="#06b6d4" stroke-width="1.5"/>
+                    <text x="432" y="180" fill="#f8fafc" font-size="11" font-family="JetBrains Mono" font-weight="600">Access-SW03</text>
+                    <text x="432" y="198" fill="#64748b" font-size="9" font-family="JetBrains Mono">VLAN 99: Management</text>
+                  </g>
+
+                  <!-- Interconnecting redundant links -->
+                  <path d="M 205 85 L 120 160" stroke="#06b6d4" stroke-width="1.2"/>
+                  <path d="M 205 85 L 300 160" stroke="#06b6d4" stroke-width="1.2"/>
+                  <path d="M 395 85 L 300 160" stroke="#06b6d4" stroke-width="1.2"/>
+                  <path d="M 395 85 L 480 160" stroke="#06b6d4" stroke-width="1.2"/>
+
+                  <!-- DHCP Relay & End Hosts below -->
+                  <rect x="60" y="250" width="480" height="40" rx="6" fill="#0f172a" stroke="#334155" stroke-width="1"/>
+                  <text x="80" y="275" fill="#94a3b8" font-size="10" font-family="JetBrains Mono">DHCP Relay (IP Helper 10.0.0.5) • Port Security (Max 2 MAC) • SSH v2 Enabled</text>
+                </svg>
+              </div>
+
+              <div class="project-overlay-badge">
+                <span class="badge-status-dot"></span>
+                <span>CISCO ARCHITECTURE LAB SPECIFICATION</span>
+              </div>
+            </div>
+
+            <div class="project-content">
+              <div class="project-meta">
+                <span class="project-client">Enterprise Core Network Lab</span>
+                <span class="project-timeline">CCNA & Practical Training</span>
+              </div>
+              <h3 class="project-title">Enterprise Multilayer Switching & Redundant Gateway Lab</h3>
+              <p class="project-description">
+                Designed and provisioned an end-to-end enterprise network topology featuring hierarchical Core, Distribution, and Access layers. Configured Inter-VLAN routing on Multilayer Switches, default gateway failover via HSRP, EtherChannel LACP aggregation, centralized DHCP relay with IP Helper, and switch hardening.
+              </p>
+
+              <div class="project-metrics-row">
+                <div class="impact-metric">
+                  <span class="impact-val text-emerald">&lt;1s Failover</span>
+                  <span class="impact-desc">HSRP Gateway Redundancy</span>
+                </div>
+                <div class="impact-metric">
+                  <span class="impact-val text-cyan">2 Gbps</span>
+                  <span class="impact-desc">LACP EtherChannel Trunk</span>
+                </div>
+                <div class="impact-metric">
+                  <span class="impact-val text-purple">100%</span>
+                  <span class="impact-desc">Traffic Isolation via ACLs</span>
+                </div>
+              </div>
+
+              <div class="project-tech-tags">
+                <span class="tag">Multilayer Switching (MLS)</span>
+                <span class="tag">Inter-VLAN SVI</span>
+                <span class="tag">HSRP Redundancy</span>
+                <span class="tag">EtherChannel LACP</span>
+                <span class="tag">Port Security</span>
+                <span class="tag">IP Helper Relay</span>
+                <span class="tag">Extended ACLs</span>
+              </div>
+
+              <div class="project-card-actions">
+                <button class="btn btn-primary btn-sm modal-trigger" data-project="network-lab">
+                  <span>Topology & CLI Configs</span>
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+                    <polyline points="15 3 21 3 21 9"></polyline>
+                    <line x1="10" y1="14" x2="21" y2="3"></line>
+                  </svg>
+                </button>
+                <a href="#subnet-calc" class="btn btn-outline btn-sm">
+                  <span>Test In Subnet Tool</span>
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <!-- PROJECT 3 -->
+          <article class="project-card" id="project-windows-server">
+            <div class="project-preview">
+              <div class="diagram-canvas">
+                <svg viewBox="0 0 600 320" class="svg-diagram" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <rect width="100%" height="100%" fill="url(#diagGrid1)" />
+
+                  <!-- Hyper-V Host -->
+                  <rect x="80" y="30" width="440" height="260" rx="10" fill="#0b1120" stroke="#8b5cf6" stroke-width="1.8"/>
+                  <text x="100" y="55" fill="#f8fafc" font-size="12" font-family="JetBrains Mono" font-weight="bold">PHYSICAL HYPER-V HOST — WINDOWS SERVER 2025</text>
+
+                  <!-- VM 1: Domain Controller -->
+                  <g class="diag-node vm-dc">
+                    <rect x="105" y="80" width="180" height="85" rx="6" fill="#1e293b" stroke="#06b6d4" stroke-width="1.5"/>
+                    <text x="120" y="105" fill="#f8fafc" font-size="11" font-family="JetBrains Mono" font-weight="600">DC01 (Primary Domain)</text>
+                    <text x="120" y="125" fill="#94a3b8" font-size="9" font-family="JetBrains Mono">AD DS • DNS Forwarder</text>
+                    <text x="120" y="145" fill="#10b981" font-size="9" font-family="JetBrains Mono">GPO Security Policies Active</text>
+                  </g>
+
+                  <!-- VM 2: DHCP & File Server -->
+                  <g class="diag-node vm-fs">
+                    <rect x="315" y="80" width="180" height="85" rx="6" fill="#1e293b" stroke="#06b6d4" stroke-width="1.5"/>
+                    <text x="330" y="105" fill="#f8fafc" font-size="11" font-family="JetBrains Mono" font-weight="600">FS01 (Storage & DHCP)</text>
+                    <text x="330" y="125" fill="#94a3b8" font-size="9" font-family="JetBrains Mono">DHCP 80/20 Failover Scope</text>
+                    <text x="330" y="145" fill="#10b981" font-size="9" font-family="JetBrains Mono">NTFS Permissions & Auditing</text>
+                  </g>
+
+                  <!-- Virtual Switch Layer -->
+                  <rect x="105" y="195" width="390" height="40" rx="4" fill="#111827" stroke="#3b82f6" stroke-width="1.2"/>
+                  <text x="120" y="220" fill="#cbd5e1" font-size="10" font-family="JetBrains Mono">Hyper-V Virtual Switch (vSwitch01 - External) • 802.1Q Tagged</text>
+
+                  <path d="M 195 165 L 195 195" stroke="#06b6d4" stroke-width="2"/>
+                  <path d="M 405 165 L 405 195" stroke="#06b6d4" stroke-width="2"/>
+
+                  <!-- Bottom physical NICs -->
+                  <text x="105" y="265" fill="#64748b" font-size="10" font-family="JetBrains Mono">Uplink: Dual 10GbE NIC Team (Switch Independent / Dynamic Hash)</text>
+                </svg>
+              </div>
+
+              <div class="project-overlay-badge">
+                <span class="badge-status-dot"></span>
+                <span>SYSTEMS & VIRTUALIZATION INFRASTRUCTURE</span>
+              </div>
+            </div>
+
+            <div class="project-content">
+              <div class="project-meta">
+                <span class="project-client">Enterprise Directory Services</span>
+                <span class="project-timeline">Windows Server 2025 Implementation</span>
+              </div>
+              <h3 class="project-title">Windows Server 2025 Active Directory & Hyper-V Infrastructure</h3>
+              <p class="project-description">
+                Built an enterprise-grade directory services and virtualization lab. Configured Active Directory Domain Services (AD DS), implemented organizational unit (OU) structures with granular Group Policy Objects (GPOs), provisioned DHCP failover scopes with IP Helper integration, and enforced least-privilege NTFS security matrices.
+              </p>
+
+              <div class="project-metrics-row">
+                <div class="impact-metric">
+                  <span class="impact-val text-emerald">Zero Drifts</span>
+                  <span class="impact-desc">Automated GPO Enforcement</span>
+                </div>
+                <div class="impact-metric">
+                  <span class="impact-val text-cyan">99.99%</span>
+                  <span class="impact-desc">DNS / DHCP Uptime</span>
+                </div>
+                <div class="impact-metric">
+                  <span class="impact-val text-purple">Hyper-V</span>
+                  <span class="impact-desc">Virtualized Role Isolation</span>
+                </div>
+              </div>
+
+              <div class="project-tech-tags">
+                <span class="tag">Windows Server 2025</span>
+                <span class="tag">Active Directory (AD DS)</span>
+                <span class="tag">Group Policy (GPO)</span>
+                <span class="tag">Hyper-V Virtualization</span>
+                <span class="tag">DNS & DHCP Failover</span>
+                <span class="tag">NTFS Permissions</span>
+                <span class="tag">PowerShell Automation</span>
+              </div>
+
+              <div class="project-card-actions">
+                <button class="btn btn-primary btn-sm modal-trigger" data-project="windows-server">
+                  <span>Architecture Deep Dive</span>
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+                    <polyline points="15 3 21 3 21 9"></polyline>
+                    <line x1="10" y1="14" x2="21" y2="3"></line>
+                  </svg>
+                </button>
+                <a href="#contact" class="btn btn-outline btn-sm">
+                  <span>Inquire for Deployment</span>
+                </a>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- INTERACTIVE NETWORKING UTILITY TOOL: SUBNET CALCULATOR -->
+    <section class="section utility-section" id="subnet-calc">
+      <div class="container">
+        <div class="section-header">
+          <div class="section-tag">LIVE INTERACTIVE TOOL</div>
+          <h2 class="section-title">Interactive IPv4 Subnet Calculator</h2>
+          <p class="section-subtitle">
+            Built directly into this portfolio: Test live CIDR calculations, network boundaries, broadcast addresses, and usable host scopes used in real-world network segmentation.
+          </p>
+        </div>
+
+        <div class="tool-card">
+          <div class="tool-inputs-row">
+            <div class="input-group">
+              <label for="subnetIpInput">IP Address</label>
+              <div class="input-with-icon">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <rect x="2" y="2" width="20" height="8" rx="2" ry="2"></rect>
+                  <rect x="2" y="14" width="20" height="8" rx="2" ry="2"></rect>
+                </svg>
+                <input type="text" id="subnetIpInput" value="192.168.10.45" placeholder="e.g. 192.168.1.1">
+              </div>
+            </div>
+
+            <div class="input-group">
+              <label for="subnetMaskSelect">Subnet Mask / CIDR Prefix</label>
+              <div class="select-with-icon">
+                <select id="subnetMaskSelect">
+                  <option value="30">/30 (255.255.255.252) — 2 Usable (P2P Link)</option>
+                  <option value="29">/29 (255.255.255.248) — 6 Usable</option>
+                  <option value="28">/28 (255.255.255.240) — 14 Usable</option>
+                  <option value="27">/27 (255.255.255.224) — 30 Usable</option>
+                  <option value="26">/26 (255.255.255.192) — 62 Usable</option>
+                  <option value="25">/25 (255.255.255.128) — 126 Usable</option>
+                  <option value="24" selected>/24 (255.255.255.0) — 254 Usable (Standard LAN)</option>
+                  <option value="23">/23 (255.255.254.0) — 510 Usable</option>
+                  <option value="22">/22 (255.255.252.0) — 1,022 Usable</option>
+                  <option value="21">/21 (255.255.248.0) — 2,046 Usable</option>
+                  <option value="20">/20 (255.255.240.0) — 4,094 Usable</option>
+                  <option value="16">/16 (255.255.0.0) — 65,534 Usable (Enterprise)</option>
+                  <option value="8">/8 (255.0.0.0) — 16,777,214 Usable</option>
+                </select>
+              </div>
+            </div>
+
+            <div class="input-group button-group">
+              <label>&nbsp;</label>
+              <button id="calculateSubnetBtn" class="btn btn-primary" style="width: 100%;">
+                <span>Calculate Scope</span>
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <polyline points="9 18 15 12 9 6"></polyline>
+                </svg>
+              </button>
+            </div>
+          </div>
+
+          <!-- Quick Preset Chips -->
+          <div class="preset-chips">
+            <span class="preset-label">Quick Lab Presets:</span>
+            <button class="preset-btn" data-ip="192.168.10.1" data-cidr="24">Branch LAN (192.168.10.0/24)</button>
+            <button class="preset-btn" data-ip="10.10.0.1" data-cidr="30">DrayTek P2P VPN (/30)</button>
+            <button class="preset-btn" data-ip="172.16.20.50" data-cidr="26">Cisco Voice VLAN (/26)</button>
+            <button class="preset-btn" data-ip="10.0.0.1" data-cidr="16">Campus Enterprise (/16)</button>
+          </div>
+
+          <!-- Result Cards -->
+          <div class="tool-results-grid" id="subnetResults">
+            <div class="result-tile">
+              <span class="res-label">Network Address</span>
+              <span class="res-value text-cyan" id="resNetwork">192.168.10.0</span>
+            </div>
+            <div class="result-tile">
+              <span class="res-label">Broadcast Address</span>
+              <span class="res-value text-purple" id="resBroadcast">192.168.10.255</span>
+            </div>
+            <div class="result-tile">
+              <span class="res-label">Usable Host Scope</span>
+              <span class="res-value text-emerald" id="resHostScope">192.168.10.1 — 192.168.10.254</span>
+            </div>
+            <div class="result-tile">
+              <span class="res-label">Subnet Mask</span>
+              <span class="res-value" id="resNetmask">255.255.255.0</span>
+            </div>
+            <div class="result-tile">
+              <span class="res-label">Wildcard Mask (ACLs)</span>
+              <span class="res-value text-amber" id="resWildcard">0.0.0.255</span>
+            </div>
+            <div class="result-tile">
+              <span class="res-label">Usable Hosts Count</span>
+              <span class="res-value" id="resHostCount">254 hosts</span>
+            </div>
+            <div class="result-tile">
+              <span class="res-label">IP Address Class / Type</span>
+              <span class="res-value" id="resIpClass">Class C (RFC 1918 Private)</span>
+            </div>
+            <div class="result-tile">
+              <span class="res-label">Binary Subnet Mask</span>
+              <span class="res-value text-dim" id="resBinaryMask">11111111.11111111.11111111.00000000</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- PROFESSIONAL EXPERIENCE & TIMELINE -->
+    <section class="section experience-section" id="experience">
+      <div class="container">
+        <div class="section-header">
+          <div class="section-tag">CAREER MILESTONES</div>
+          <h2 class="section-title">Professional Experience & Education</h2>
+          <p class="section-subtitle">
+            A comprehensive journey showcasing real infrastructure delivery, rigorous education, and complementary business leadership.
+          </p>
+        </div>
+
+        <!-- Filter tabs for timeline -->
+        <div class="timeline-filters">
+          <button class="t-filter active" data-tfilter="all">All Milestones</button>
+          <button class="t-filter" data-tfilter="technical">Technical Experience</button>
+          <button class="t-filter" data-tfilter="education">Education & Certifications</button>
+          <button class="t-filter" data-tfilter="leadership">Leadership & Commercial Background</button>
+        </div>
+
+        <div class="timeline-container">
+          <!-- Item 1: MEGA SCAN -->
+          <div class="timeline-item" data-group="technical">
+            <div class="timeline-marker">
+              <span class="marker-dot current"></span>
+            </div>
+            <div class="timeline-content">
+              <div class="t-header">
+                <div>
+                  <span class="t-badge current-badge">CURRENT ROLE</span>
+                  <h3 class="t-role">IT & Network Infrastructure Support</h3>
+                  <h4 class="t-company text-cyan">MEGA SCAN — 5 Branches</h4>
+                </div>
+                <span class="t-date">Feb 2025 — Present</span>
+              </div>
+              <p class="t-desc">
+                Directly responsible for continuous IT infrastructure support across five active branches, governing networks, servers, printers, CCTV surveillance, and employee biometric attendance systems.
+              </p>
+              <ul class="t-bullet-list">
+                <li>Upgraded, configured, and maintained CCTV systems, IP cameras, DVR/NVR environments, elevating surveillance operational readiness from ~20% to 100%.</li>
+                <li>Configured and supported DrayTek VPN devices ensuring uninterrupted, encrypted branch-to-branch data flows.</li>
+                <li>Supervised ZKTeco biometric devices, staff enrollment, and database sync, boosting attendance extraction reliability from 70% to 100%.</li>
+                <li>Provided high-priority troubleshooting for MILLENSYS Advanced Healthcare Solutions (HIS, PACS imaging, RPS, and ERP systems).</li>
+              </ul>
+              <div class="t-skills-tags">
+                <span>DrayTek VPN</span>
+                <span>ZKTeco</span>
+                <span>NVR/DVR</span>
+                <span>Windows Server</span>
+                <span>MILLENSYS HIS/PACS</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Item 2: MSB Design -->
+          <div class="timeline-item" data-group="technical">
+            <div class="timeline-marker">
+              <span class="marker-dot"></span>
+            </div>
+            <div class="timeline-content">
+              <div class="t-header">
+                <div>
+                  <h3 class="t-role">Freelance IT Infrastructure Support Specialist</h3>
+                  <h4 class="t-company text-emerald">MSB Design — On-site Visits (Egypt & Saudi Arabia)</h4>
+                </div>
+                <span class="t-date">Contract Roles</span>
+              </div>
+              <p class="t-desc">
+                Provided on-site technical support and infrastructure deployments for commercial branch offices across Egypt and Saudi Arabia.
+              </p>
+              <ul class="t-bullet-list">
+                <li>Supported cross-border IT infrastructure across Egypt and KSA including switches, workstations, servers, and network peripherals.</li>
+                <li>Configured and troubleshot CCTV IP cameras, DVR/NVR surveillance connectivity, and remote monitoring links.</li>
+                <li>Delivered rapid on-site maintenance, system upgrades, user assistance, and hardware diagnostics.</li>
+              </ul>
+              <div class="t-skills-tags">
+                <span>Egypt & KSA Deployments</span>
+                <span>IP Surveillance</span>
+                <span>On-Site Maintenance</span>
+                <span>Workstation Support</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Item 3: Enterprise Network Support Lab -->
+          <div class="timeline-item" data-group="technical">
+            <div class="timeline-marker">
+              <span class="marker-dot"></span>
+            </div>
+            <div class="timeline-content">
+              <div class="t-header">
+                <div>
+                  <h3 class="t-role">Enterprise Network Support Lab</h3>
+                  <h4 class="t-company text-purple">Hands-on Architecture Training</h4>
+                </div>
+                <span class="t-date">Intensive Project</span>
+              </div>
+              <p class="t-desc">
+                Architected and simulated enterprise networks implementing multilayer switching, Inter-VLAN routing, ACL security filters, centralized DHCP with IP Helper, NAT, Port Security, and HSRP high availability.
+              </p>
+              <div class="t-skills-tags">
+                <span>Cisco IOS</span>
+                <span>HSRP Redundancy</span>
+                <span>EtherChannel</span>
+                <span>VLAN Routing</span>
+                <span>ACL Filters</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Item 4: Education - Ain Shams University -->
+          <div class="timeline-item" data-group="education">
+            <div class="timeline-marker">
+              <span class="marker-dot edu"></span>
+            </div>
+            <div class="timeline-content">
+              <div class="t-header">
+                <div>
+                  <span class="t-badge edu-badge">ACADEMIC DEGREE</span>
+                  <h3 class="t-role">Diploma in Information Technology</h3>
+                  <h4 class="t-company text-cyan">Ain Shams University</h4>
+                </div>
+                <span class="t-date">Currently Pursuing (First-Year Student)</span>
+              </div>
+              <p class="t-desc">
+                Formal IT and computer systems curriculum focusing on enterprise networking, database management, cloud systems, and computing architectures.
+              </p>
+            </div>
+          </div>
+
+          <!-- Item 5: Professional Technical Certifications -->
+          <div class="timeline-item" data-group="education">
+            <div class="timeline-marker">
+              <span class="marker-dot cert"></span>
+            </div>
+            <div class="timeline-content">
+              <div class="t-header">
+                <div>
+                  <span class="t-badge cert-badge">INDUSTRY CERTIFICATIONS</span>
+                  <h3 class="t-role">Technical Certifications & Training</h3>
+                  <h4 class="t-company text-emerald">Cisco • CompTIA • Microsoft • Hikvision</h4>
+                </div>
+                <span class="t-date">Accredited Credentials</span>
+              </div>
+              <div class="certs-inline-grid">
+                <div class="cert-pill">
+                  <span class="cert-name">CCNA (Cisco Certified Network Associate)</span>
+                  <span class="cert-tag">Routing & Switching</span>
+                </div>
+                <div class="cert-pill">
+                  <span class="cert-name">CompTIA Network+</span>
+                  <span class="cert-tag">Network Architecture</span>
+                </div>
+                <div class="cert-pill">
+                  <span class="cert-name">CompTIA A+</span>
+                  <span class="cert-tag">Hardware & OS</span>
+                </div>
+                <div class="cert-pill">
+                  <span class="cert-name">Microsoft Windows Server 2025</span>
+                  <span class="cert-tag">Server Administration & Infrastructure</span>
+                </div>
+                <div class="cert-pill">
+                  <span class="cert-name">HCSA - CCTV Systems</span>
+                  <span class="cert-tag">Hikvision Certified Associate</span>
+                </div>
+                <div class="cert-pill">
+                  <span class="cert-name">Huawei Cloud Architecture</span>
+                  <span class="cert-tag">In Progress (Online)</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Item 6: Leadership Background -->
+          <div class="timeline-item" data-group="leadership">
+            <div class="timeline-marker">
+              <span class="marker-dot leader"></span>
+            </div>
+            <div class="timeline-content">
+              <div class="t-header">
+                <div>
+                  <span class="t-badge leader-badge">MANAGEMENT & COMMERCIAL</span>
+                  <h3 class="t-role">Sales Team Leader & Sales Manager</h3>
+                  <h4 class="t-company text-amber">Royal House Developments • Wadi Degla • Financial Sector</h4>
+                </div>
+                <span class="t-date">Earlier Career</span>
+              </div>
+              <p class="t-desc">
+                Promoted from Team Leader to Sales Manager; managed client relationships, conducted performance escalations, led high-performing teams, and handled international logistics. Complementary background also includes banking sales (Mashreq, Barclays) and telecom customer service (RAYA & Vodafone Egypt).
+              </p>
+              <div class="t-skills-tags">
+                <span>Executive Communication</span>
+                <span>Team Leadership</span>
+                <span>Client Escalations</span>
+                <span>SLA Management</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Item 7: Cairo University Law -->
+          <div class="timeline-item" data-group="education">
+            <div class="timeline-marker">
+              <span class="marker-dot edu"></span>
+            </div>
+            <div class="timeline-content">
+              <div class="t-header">
+                <div>
+                  <h3 class="t-role">Bachelor of Law</h3>
+                  <h4 class="t-company text-purple">Cairo University (Faculty of Law)</h4>
+                </div>
+                <span class="t-date">Graduated 2012</span>
+              </div>
+              <p class="t-desc">
+                Strong legal and analytical foundation fostering structured logic, compliance awareness, and contractual precision in enterprise IT procurement and SLAs.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT & HIRE ME SECTION -->
+    <section class="section contact-section" id="contact">
+      <div class="container">
+        <div class="section-header">
+          <div class="section-tag">GET IN TOUCH</div>
+          <h2 class="section-title">Ready to Elevate Your Network & IT Infrastructure?</h2>
+          <p class="section-subtitle">
+            Whether you have an immediate full-time opening, need multi-branch VPN connectivity, or require a technical infrastructure audit, I'm ready to connect.
+          </p>
+        </div>
+
+        <div class="contact-grid">
+          <!-- Contact Direct Details Card -->
+          <div class="contact-card direct-info-card">
+            <h3 class="contact-card-title">Direct Contact Information</h3>
+            <p class="contact-card-desc">
+              Fastest response via Email or WhatsApp. Open to opportunities in Giza, Cairo, remote infrastructure management, and GCC relocations.
+            </p>
+
+            <div class="contact-methods">
+              <div class="method-item">
+                <div class="method-icon text-cyan">
+                  <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                    <polyline points="22,6 12,13 2,6"></polyline>
+                  </svg>
+                </div>
+                <div class="method-details">
+                  <span class="method-label">Direct Email</span>
+                  <a href="mailto:Ahmedalshamy247@gmail.com" class="method-val" id="emailLink">Ahmedalshamy247@gmail.com</a>
+                  <button class="copy-btn" id="copyEmailBtn" title="Copy Email to Clipboard">
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                      <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
+                      <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
+                    </svg>
+                    <span>Copy</span>
+                  </button>
+                </div>
+              </div>
+
+              <div class="method-item">
+                <div class="method-icon text-emerald">
+                  <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+                  </svg>
+                </div>
+                <div class="method-details">
+                  <span class="method-label">Phone & WhatsApp</span>
+                  <a href="tel:+201011655015" class="method-val">+20 10 1165 5015</a>
+                  <a href="https://wa.me/201011655015" target="_blank" rel="noopener noreferrer" class="whatsapp-btn">Chat on WhatsApp</a>
+                </div>
+              </div>
+
+              <div class="method-item">
+                <div class="method-icon text-purple">
+                  <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                    <circle cx="12" cy="10" r="3"></circle>
+                  </svg>
+                </div>
+                <div class="method-details">
+                  <span class="method-label">Current Location</span>
+                  <span class="method-val">Giza, Egypt</span>
+                  <span class="subtext">Available for full-time, contract & relocation</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Download Official CV button -->
+            <div class="cv-download-box">
+              <div class="cv-text">
+                <strong>Ahmed_Mounir_IT_CV_Reviewed.pdf</strong>
+                <span>Verified resume with full technical credentials</span>
+              </div>
+              <a href="Ahmed_Mounir_IT_CV_Reviewed.pdf" class="btn btn-primary btn-sm" download="Ahmed_Mounir_IT_CV.pdf" id="contactDownloadCvBtn">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+                  <polyline points="7 10 12 15 17 10"></polyline>
+                  <line x1="12" y1="15" x2="12" y2="3"></line>
+                </svg>
+                <span>Download PDF</span>
+              </a>
+            </div>
+          </div>
+
+          <!-- Interactive Contact Form -->
+          <div class="contact-card form-card">
+            <h3 class="contact-card-title">Send a Direct Message</h3>
+            <p class="contact-card-desc">Fill out this quick form to initiate an interview or request a consultation.</p>
+
+            <form id="contactForm" class="contact-form" novalidate>
+              <div class="form-row">
+                <div class="form-group">
+                  <label for="formName">Full Name *</label>
+                  <input type="text" id="formName" name="name" placeholder="e.g. Sarah Jenkins" required>
+                  <span class="form-error" id="nameError">Please enter your name.</span>
+                </div>
+                <div class="form-group">
+                  <label for="formEmail">Email Address *</label>
+                  <input type="email" id="formEmail" name="email" placeholder="e.g. sarah@company.com" required>
+                  <span class="form-error" id="emailError">Please enter a valid email address.</span>
+                </div>
+              </div>
+
+              <div class="form-group">
+                <label for="formRole">Inquiry Type / Opportunity</label>
+                <select id="formRole" name="inquiryType">
+                  <option value="Full-Time Hiring">Full-Time Network / IT Infrastructure Role</option>
+                  <option value="Freelance / Contract">Multi-Branch Network / VPN Consulting</option>
+                  <option value="CCTV / Biometrics">CCTV Surveillance & Biometric Deployment</option>
+                  <option value="General Inquiry">General Technical Discussion</option>
+                </select>
+              </div>
+
+              <div class="form-group">
+                <label for="formMessage">Message / Project Details *</label>
+                <textarea id="formMessage" name="message" rows="5" placeholder="Tell me about the role, technical requirements, or infrastructure scope..." required></textarea>
+                <span class="form-error" id="messageError">Please enter your message.</span>
+              </div>
+
+              <button type="submit" class="btn btn-primary submit-btn" id="submitFormBtn">
+                <span id="submitBtnText">Transmit Message</span>
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <line x1="22" y1="2" x2="11" y2="13"></line>
+                  <polygon points="22 2 15 22 11 13 2 9 22 2"></polygon>
+                </svg>
+              </button>
+            </form>
+
+            <div class="form-toast" id="formToast" role="alert" aria-live="polite">
+              <div class="toast-icon">✓</div>
+              <div class="toast-message">
+                <strong>Message Dispatched!</strong>
+                <p>Thank you! Your message was received. I will respond to your email promptly.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- MODAL FOR DETAILED ARCHITECTURE BREAKDOWN -->
+  <div class="modal-backdrop" id="projectModal" aria-hidden="true" role="dialog" aria-modal="true">
+    <div class="modal-container">
+      <div class="modal-header">
+        <div class="modal-title-wrap">
+          <span class="modal-badge" id="modalBadge">SYSTEM ARCHITECTURE</span>
+          <h3 class="modal-title" id="modalTitle">Project Title</h3>
+        </div>
+        <button class="modal-close-btn" id="modalCloseBtn" aria-label="Close Modal">&times;</button>
+      </div>
+
+      <div class="modal-tabs">
+        <button class="m-tab active" data-tab="overview">Overview & Impact</button>
+        <button class="m-tab" data-tab="topology">Topology & Protocols</button>
+        <button class="m-tab" data-tab="config">Configuration Highlights</button>
+      </div>
+
+      <div class="modal-body" id="modalBody">
+        <!-- Dynamically rendered by script.js -->
+      </div>
+    </div>
+  </div>
+
+  <!-- SITE FOOTER -->
+  <footer class="site-footer">
+    <div class="container footer-container">
+      <div class="footer-left">
+        <div class="footer-brand">
+          <span class="brand-name">AHMED MOHAMED MOUNIR</span>
+          <span class="brand-role">Network & IT Infrastructure Support Engineer</span>
+        </div>
+        <p class="footer-tagline">
+          High-availability network engineering, branch-to-branch secure VPNs, and resilient enterprise systems.
+        </p>
+      </div>
+
+      <div class="footer-center">
+        <div class="system-health-pill">
+          <span class="pulse-dot-green"></span>
+          <span>ALL INFRASTRUCTURE ONLINE • PING: 12ms</span>
+        </div>
+      </div>
+
+      <div class="footer-right">
+        <ul class="footer-socials">
+          <li>
+            <a href="https://github.com/ahmedalshamy247-lang/Ahmed-portfolio" target="_blank" rel="noopener noreferrer" aria-label="GitHub Repository" title="GitHub">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
+              </svg>
+            </a>
+          </li>
+          <li>
+            <a href="mailto:Ahmedalshamy247@gmail.com" aria-label="Email Ahmed">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                <polyline points="22,6 12,13 2,6"></polyline>
+              </svg>
+            </a>
+          </li>
+          <li>
+            <a href="tel:+201011655015" aria-label="Call Ahmed">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+              </svg>
+            </a>
+          </li>
+          <li>
+            <a href="https://wa.me/201011655015" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"></path>
+              </svg>
+            </a>
+          </li>
+          <li>
+            <a href="Ahmed_Mounir_IT_CV_Reviewed.pdf" download="Ahmed_Mounir_IT_CV.pdf" aria-label="Download CV" title="Download CV">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+                <polyline points="7 10 12 15 17 10"></polyline>
+                <line x1="12" y1="15" x2="12" y2="3"></line>
+              </svg>
+            </a>
+          </li>
+        </ul>
+
+        <div class="footer-copy">
+          &copy; <span id="currentYear">2026</span> Ahmed Mohamed Mounir. All Rights Reserved.
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scroll To Top Button -->
+  <button class="back-to-top" id="backToTopBtn" aria-label="Back to Top">
+    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+      <polyline points="18 15 12 9 6 15"></polyline>
+    </svg>
+  </button>
+
+  <script src="script.js"></script>
+</body>
+</html>
